@@ -1,0 +1,60 @@
+---
+title: "MyshinyApp"
+author: "Bence Szikora"
+date: "2025-03-11"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## The data
+
+This presentation contains the main information for myShinyApp.
+
+The data set of the app is the diamond data set from the ggplot2 package. This data set contains the prices and other attributes of almost 54,000 diamonds.
+
+Here is the head of the data set:
+
+```{r}
+library(ggplot2)
+head(diamonds)
+```
+
+## How to use the app
+
+This application  can help yo to estimate the price (USD) of your diamond with a given weight (carat) based on your diamond type.
+
+You can select:
+
+- the quality of the cut  
+- the color of your diamond (D is the most valuable, J is the least)
+- the weight of your diamond (with 0.1 step)
+
+## The code:
+The code for the plot in the next slide:
+
+```{r, echo=TRUE, results='hide'}
+#data=diamonds
+#data1 <- data[data$cut == "Fair" & data$color == "D", ]
+#d=plot(data1$carat, data1$price, pch = 19, 
+#                 xlab = "Carat",
+#                 ylab = "Price",
+#                 main = paste("Price per carat for Fair cut and D color"),
+#                 xlim = c(0, 5), ylim = c(0, 20000))
+
+```
+
+## A demo plot from the app.
+
+```{r}
+data=diamonds
+data1 <- data[data$cut == "Fair" & data$color == "D", ]
+plot(data1$carat, data1$price, pch = 19, 
+                 xlab = "Carat",
+                 ylab = "Price",
+                 main = paste("Price per carat for Fair cut and D color"),
+                 xlim = c(0, 5), ylim = c(0, 20000))
+```
+
