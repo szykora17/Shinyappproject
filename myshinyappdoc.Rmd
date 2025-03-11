@@ -1,0 +1,26 @@
+---
+title: "Supported documentation for my shiny app"
+author: "Bence Szikora"
+date: "2025-03-11"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This document contains the main information for using myShinyApp.
+
+The data set of the app is the diamond data set from the ggplot2 package. This data set contains the prices and other attributes of almost 54,000 diamonds.
+
+This application  can help yo to estimate the price (USD) of your diamond with a given weight (carat) based on your diamond type.
+
+You can select the quality of the cut and the color of your diamond (D is the most valuable, J is the least)
+
+With the slidebar you can select the weight of your diamond (with 0.1 step)
+
+The output will be a plot with the datapoints of your selected diamonds and a linear regression model fit with your selected weight. Under the plot you can see the estimated price of your diamond.
+
+
